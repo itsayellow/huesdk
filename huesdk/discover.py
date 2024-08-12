@@ -12,6 +12,13 @@ class mDNSListener(ServiceListener):
         info = zc.get_service_info(type_, name)
         mdns_bridges.append(info)
 
+    def update_service(self, zc: Zeroconf, type_: str, name: str) -> None:
+        pass
+
+    def remove_service(self, zc: Zeroconf, type_: str, name: str) -> None:
+        pass
+
+
 class Discover:
 
     def __init__(self,discovery_url="https://discovery.meethue.com"):
